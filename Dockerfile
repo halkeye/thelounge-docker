@@ -11,6 +11,7 @@ EXPOSE ${PORT}
 
 ENTRYPOINT ["docker-entrypoint.sh"]
 CMD ["thelounge", "start"]
+WORKDIR "${THELOUNGE_HOME}"
 
 COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 
